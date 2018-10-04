@@ -21,9 +21,21 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Splash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Splash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -162,10 +162,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Game.cpp" />
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Splash.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Game.h" />
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Bootstrap\Project2D\Splash.h" />
     <ClInclude Include="Application2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
