@@ -32,6 +32,7 @@ void Game::OnEnter(StateMachine* pStateMachine)
 	m_fCameraY = 0.0f;
 	m_fTimer = 0.0f;
 }
+
 //--------------------------------------------------------------------------------------
 // Updates the state when it is running
 //
@@ -46,19 +47,19 @@ void Game::OnUpdate(float fDeltaTime, StateMachine* pStateMachine,
 	m_fTimer += fDeltaTime;
 
 	// input example
-	aie::Input* input = aie::Input::getInstance();
+	aie::Input* pInput = aie::Input::getInstance();
 
 	// use arrow keys to move camera
-	if (input->isKeyDown(aie::INPUT_KEY_UP))
+	if (pInput->isKeyDown(aie::INPUT_KEY_UP))
 		m_fCameraY += 500.0f * fDeltaTime;
 
-	if (input->isKeyDown(aie::INPUT_KEY_DOWN))
+	if (pInput->isKeyDown(aie::INPUT_KEY_DOWN))
 		m_fCameraY -= 500.0f * fDeltaTime;
 
-	if (input->isKeyDown(aie::INPUT_KEY_LEFT))
+	if (pInput->isKeyDown(aie::INPUT_KEY_LEFT))
 		m_fCameraX -= 500.0f * fDeltaTime;
 
-	if (input->isKeyDown(aie::INPUT_KEY_RIGHT))
+	if (pInput->isKeyDown(aie::INPUT_KEY_RIGHT))
 		m_fCameraX += 500.0f * fDeltaTime;
 }
 

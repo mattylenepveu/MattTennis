@@ -44,6 +44,9 @@ public:
 	virtual void draw();
 
 protected:
+	// Allows for access to the renderer class
 	Renderer2D* m_p2dRenderer;
+
+	// Pointers allows for access to the state machine
 	StateMachine* m_pStateMachine;
 };

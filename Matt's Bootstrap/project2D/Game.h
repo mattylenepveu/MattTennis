@@ -54,11 +54,17 @@ public:
 	void OnExit(StateMachine* pStateMachine);
 
 private:
+	// Gives the game screen access to the renderer
 	aie::Renderer2D* m_p2dRenderer;
+
+	// Allows for access to the font class to draw font
 	aie::Font* m_pFont;
 
+	// Indicates the x and y position of the camera
 	float m_fCameraX;
 	float m_fCameraY;
+
+	// Works as a timer to allow for delta time to work
 	float m_fTimer;
 };
 

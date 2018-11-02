@@ -17,5 +17,6 @@ int main()
 	// Deletes app to prevent memory leaks
 	delete pApp;
 
+	// Terminates the Application
 	return 0;
 }
