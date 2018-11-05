@@ -8,6 +8,12 @@ Game::Game()
 {
 	m_p2dRenderer = new aie::Renderer2D();
 
+	// Manages the textures in the resource manager
+	ResourceManager<Texture>* pTextureManager = ResourceManager<Texture>::GetInstance();
+
+	// Loads the texture from resource manager and stores in texture pointer
+	m_pCourt = pTextureManager->LoadResource("./textures/Grass Court.png");
+
 	m_pFont = new aie::Font("./font/consolas_bold.ttf", 32);
 }
 
@@ -77,23 +83,26 @@ void Game::OnDraw(Renderer2D* m_2dRenderer)
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
-	// draw a thin line
-	m_2dRenderer->drawLine(300, 300, 600, 400, 2, 1);
+	// Draws the image at a position which is passed in to function
+	m_2dRenderer->drawSprite(m_pCourt, 640, 355);
 
-	// draw a moving purple circle
-	m_2dRenderer->setRenderColour(1, 0, 1, 1);
-	m_2dRenderer->drawCircle(sin(m_fTimer) * 100 + 600, 150, 50);
+	//// draw a thin line
+	//m_2dRenderer->drawLine(300, 300, 600, 400, 2, 1);
 
-	// draw a rotating red box
-	m_2dRenderer->setRenderColour(1, 0, 0, 1);
-	m_2dRenderer->drawBox(600, 500, 60, 20, m_fTimer);
+	//// draw a moving purple circle
+	//m_2dRenderer->setRenderColour(1, 0, 1, 1);
+	//m_2dRenderer->drawCircle(sin(m_fTimer) * 100 + 600, 150, 50);
 
-	// draw a slightly rotated sprite with no texture, coloured yellow
-	m_2dRenderer->setRenderColour(1, 1, 0, 1);
-	m_2dRenderer->drawSprite(nullptr, 400, 400, 50, 50, 3.14159f * 0.25f, 1);
+	//// draw a rotating red box
+	//m_2dRenderer->setRenderColour(1, 0, 0, 1);
+	//m_2dRenderer->drawBox(600, 500, 60, 20, m_fTimer);
 
-	// output some text, uses the last used colour
-	m_2dRenderer->drawText(m_pFont, "Press ESC to quit!", 0, 720 - 64);
+	//// draw a slightly rotated sprite with no texture, coloured yellow
+	//m_2dRenderer->setRenderColour(1, 1, 0, 1);
+	//m_2dRenderer->drawSprite(nullptr, 400, 400, 50, 50, 3.14159f * 0.25f, 1);
+
+	//// output some text, uses the last used colour
+	//m_2dRenderer->drawText(m_pFont, "Press ESC to quit!", 0, 720 - 64);
 
 	// done drawing sprites
 	m_2dRenderer->end();

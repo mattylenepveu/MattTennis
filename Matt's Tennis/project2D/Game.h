@@ -57,6 +57,8 @@ private:
 	// Gives the game screen access to the renderer
 	aie::Renderer2D* m_p2dRenderer;
 
+	aie::Texture* m_pCourt;
+
 	// Allows for access to the font class to draw font
 	aie::Font* m_pFont;
 
