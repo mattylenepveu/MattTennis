@@ -11,8 +11,12 @@ Game::Game()
 	// Manages the textures in the resource manager
 	ResourceManager<Texture>* pTextureManager = ResourceManager<Texture>::GetInstance();
 
+	m_pBackground = pTextureManager->LoadResource("./textures/Background.png");
+
 	// Loads the texture from resource manager and stores in texture pointer
 	m_pCourt = pTextureManager->LoadResource("./textures/Grass Court.png");
+
+	m_pWall = pTextureManager->LoadResource("./textures/Wall.png");
 
 	m_pFont = new aie::Font("./font/consolas_bold.ttf", 32);
 }
@@ -83,8 +87,24 @@ void Game::OnDraw(Renderer2D* m_2dRenderer)
 	// begin drawing sprites
 	m_2dRenderer->begin();
 
+	m_2dRenderer->drawSprite(m_pBackground, 640, 360);
+
+	// output some text, uses the last used colour
+	m_2dRenderer->drawText(m_pFont, "Score", 20, 680);
+
+	// output some text, uses the last used colour
+	m_2dRenderer->drawText(m_pFont, "11", 20, 640);
+
+	// output some text, uses the last used colour
+	m_2dRenderer->drawText(m_pFont, "Best", 1180, 680);
+
+	// output some text, uses the last used colour
+	m_2dRenderer->drawText(m_pFont, "56", 1180, 640);
+
 	// Draws the image at a position which is passed in to function
 	m_2dRenderer->drawSprite(m_pCourt, 640, 355);
+
+	m_2dRenderer->drawSprite(m_pWall, 640, 675);
 
 	//// draw a thin line
 	//m_2dRenderer->drawLine(300, 300, 600, 400, 2, 1);

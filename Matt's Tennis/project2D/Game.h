@@ -59,6 +59,10 @@ private:
 
 	aie::Texture* m_pCourt;
 
+	aie::Texture* m_pWall;
+
+	aie::Texture* m_pBackground;
+
 	// Allows for access to the font class to draw font
 	aie::Font* m_pFont;
 
