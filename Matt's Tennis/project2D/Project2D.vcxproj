@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)bootstrap;$(SolutionDir)dependencies/imgui;$(SolutionDir)dependencies/glm;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(SolutionDir)temp\bootstrap\$(Platform)\$(Configuration);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>$(SolutionDir)temp\Bootstrap\x64\Debug;$(SolutionDir)dependencies/glfw/lib-vc2015/;$(SolutionDir)dependencies/glfw/;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)temp\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)temp\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
@@ -122,7 +122,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>bootstrap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;bootstrap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\glfw\lib-vc2015</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -162,7 +163,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\ScoreManager.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\ScoreManager.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Start.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -171,7 +172,7 @@
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\ScoreManager.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\ScoreManager.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Start.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="DynamicArray.h" />

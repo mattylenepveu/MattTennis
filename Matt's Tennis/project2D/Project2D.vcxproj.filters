@@ -33,7 +33,7 @@
     <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Start.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\ScoreManager.cpp">
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\ScoreManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,7 +68,7 @@
     <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Start.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\ScoreManager.h">
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\ScoreManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
