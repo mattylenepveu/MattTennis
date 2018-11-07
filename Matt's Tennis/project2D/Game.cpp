@@ -14,9 +14,15 @@ Game::Game()
 	m_pBackground = pTextureManager->LoadResource("./textures/Background.png");
 
 	// Loads the texture from resource manager and stores in texture pointer
-	m_pCourt = pTextureManager->LoadResource("./textures/Grass Court.png");
+	m_pCourt = pTextureManager->LoadResource("./textures/Clay Court.png");
 
-	m_pWall = pTextureManager->LoadResource("./textures/Wall.png");
+	m_pBall = pTextureManager->LoadResource("./textures/Ball.png");
+
+	m_pPlayer = new Player();
+
+	//m_pRacquet = pTextureManager->LoadResource("./textures/Racquet.png");
+
+	m_pWall = new Wall(Vector2(640, 675));
 
 	m_pFont = new aie::Font("./font/consolas_bold.ttf", 32);
 }
@@ -28,6 +34,9 @@ Game::~Game()
 {
 	delete m_p2dRenderer;
 	delete m_pFont;
+
+	delete m_pPlayer;
+	delete m_pWall;
 }
 
 //--------------------------------------------------------------------------------------
@@ -59,18 +68,20 @@ void Game::OnUpdate(float fDeltaTime, StateMachine* pStateMachine,
 	// input example
 	aie::Input* pInput = aie::Input::getInstance();
 
-	// use arrow keys to move camera
-	if (pInput->isKeyDown(aie::INPUT_KEY_UP))
-		m_fCameraY += 500.0f * fDeltaTime;
+	//// use arrow keys to move camera
+	//if (pInput->isKeyDown(aie::INPUT_KEY_UP))
+	//	m_fCameraY += 500.0f * fDeltaTime;
 
-	if (pInput->isKeyDown(aie::INPUT_KEY_DOWN))
-		m_fCameraY -= 500.0f * fDeltaTime;
+	//if (pInput->isKeyDown(aie::INPUT_KEY_DOWN))
+	//	m_fCameraY -= 500.0f * fDeltaTime;
 
-	if (pInput->isKeyDown(aie::INPUT_KEY_LEFT))
-		m_fCameraX -= 500.0f * fDeltaTime;
+	//if (pInput->isKeyDown(aie::INPUT_KEY_LEFT))
+	//	m_fCameraX -= 500.0f * fDeltaTime;
 
-	if (pInput->isKeyDown(aie::INPUT_KEY_RIGHT))
-		m_fCameraX += 500.0f * fDeltaTime;
+	//if (pInput->isKeyDown(aie::INPUT_KEY_RIGHT))
+	//	m_fCameraX += 500.0f * fDeltaTime;
+
+	m_pPlayer->Update(fDeltaTime);
 }
 
 //--------------------------------------------------------------------------------------
@@ -104,7 +115,13 @@ void Game::OnDraw(Renderer2D* m_2dRenderer)
 	// Draws the image at a position which is passed in to function
 	m_2dRenderer->drawSprite(m_pCourt, 640, 355);
 
-	m_2dRenderer->drawSprite(m_pWall, 640, 675);
+	m_2dRenderer->drawSprite(m_pBall, 640, 360);
+
+	//m_2dRenderer->drawSprite(m_pRacquet, 675, 75);
+
+	m_pPlayer->Draw(m_2dRenderer);
+
+	m_pWall->Draw(m_2dRenderer);
 
 	//// draw a thin line
 	//m_2dRenderer->drawLine(300, 300, 600, 400, 2, 1);

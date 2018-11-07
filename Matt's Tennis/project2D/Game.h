@@ -5,6 +5,8 @@
 #include "Texture.h"
 #include "ResourceManager.h"
 #include "Font.h"
+#include "Wall.h"
+#include "Player.h"
 
 class Game : public State
 {
@@ -59,9 +61,15 @@ private:
 
 	aie::Texture* m_pCourt;
 
-	aie::Texture* m_pWall;
-
 	aie::Texture* m_pBackground;
+
+	aie::Texture* m_pBall;
+
+	Player* m_pPlayer;
+
+	//aie::Texture* m_pRacquet;
+
+	Wall* m_pWall;
 
 	// Allows for access to the font class to draw font
 	aie::Font* m_pFont;

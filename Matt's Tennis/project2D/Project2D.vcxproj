@@ -163,8 +163,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\CollisionManager.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Entity.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix2.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix3.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix4.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Player.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Racquet.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\ScoreManager.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Start.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector2.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector3.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector4.cpp" />
+    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Wall.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
@@ -172,8 +183,21 @@
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Collider.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\CollisionManager.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Entity.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix2.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix3.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix4.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Player.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Racquet.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\ScoreManager.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Start.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector2.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector3.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector4.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\VectorCast.h" />
+    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Wall.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Game.h" />
