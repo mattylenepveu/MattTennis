@@ -7,6 +7,7 @@
 #include "Font.h"
 #include "Wall.h"
 #include "Player.h"
+#include "Ball.h"
 
 class Game : public State
 {
@@ -67,7 +68,7 @@ private:
 
 	Player* m_pPlayer;
 
-	//aie::Texture* m_pRacquet;
+	//Ball* m_pBall;
 
 	Wall* m_pWall;
 

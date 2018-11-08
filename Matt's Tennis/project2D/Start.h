@@ -54,9 +54,6 @@ public:
 	void OnExit(StateMachine* pStateMachine);
 
 private:
-	// Gives the game screen access to the renderer
-	Texture* m_pRoger;
-
 	// Allows for access to the font class to draw font
 	Font* m_pFont;
 

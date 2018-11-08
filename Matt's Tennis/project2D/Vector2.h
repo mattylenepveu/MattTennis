@@ -349,6 +349,7 @@ public:
 	float x;
 	float y;
 };
+
 //--------------------------------------------------------------------------------------
 // Overloads the multiply symbol to multiply two Vector2's together.
 //

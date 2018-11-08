@@ -13,14 +13,14 @@ Player::Player()
 	m_racquet->SetParent(this);
 	SetChildren(m_racquet);
 
-	m_racquet->SetPosition(75, 0);
+	m_racquet->SetPosition(30, 0);
 
 	// Transforms its state per frame
 	localTransform = localTransform * m3ChangePos;
 	UpdateTransform();
 
 	// Adds car to the collision list
-	//CollisionManager::GetInstance()->AddObject(this);
+	CollisionManager::GetInstance()->AddObject(this);
 
 	m_fSpeed = 200.0f;
 	m_fMoveX = 0.0f;
@@ -38,11 +38,12 @@ void Player::Update(float fDeltaTime)
 	aie::Input* pInput = aie::Input::getInstance();
 
 	// Sets default values for local variables
-	float rot = 0;
 	m_v2MoveDir = Vector2(0, 0);
 
+	m_racquet->Update(fDeltaTime);
+
 	// Tests any collision between car and other objects per frame
-	//Entity* collide = CollisionManager::GetInstance()->TestBoxCollision(this);
+	Entity* collide = CollisionManager::GetInstance()->TestBoxCollision(this);
 
 	// KEYUP
 	// W

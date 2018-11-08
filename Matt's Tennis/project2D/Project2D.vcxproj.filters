@@ -13,135 +13,168 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Math Lib">
+      <UniqueIdentifier>{170e3041-c197-4b37-a5fe-355f40d4ac99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game States">
+      <UniqueIdentifier>{c95b430d-6d83-4648-aa84-cb451f86452f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game Classes">
+      <UniqueIdentifier>{52ae2af4-63cc-41a5-aa4d-680d8a467644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Design Patterns">
+      <UniqueIdentifier>{75197c5a-b8d7-40be-b4f7-0edd2e56dd89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Arrays / Lists">
+      <UniqueIdentifier>{0770d7b3-068b-47d3-a667-ab846147b466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math Lib">
+      <UniqueIdentifier>{6b5a0658-4127-458b-8e03-76406a56c5b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game States">
+      <UniqueIdentifier>{995a2431-4252-499f-8d04-85fc41c928d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Classes">
+      <UniqueIdentifier>{c7578e6f-2350-4d68-8ad1-56631e1bc779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Design Patterns">
+      <UniqueIdentifier>{fd776bec-8a83-4d9d-b16d-d5ccc7e07532}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Splash.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Start.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\project2D\ScoreManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Math Lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix3.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Math Lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix4.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Math Lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Entity.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector2.cpp">
+      <Filter>Source Files\Math Lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Wall.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector3.cpp">
+      <Filter>Source Files\Math Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Vector4.cpp">
+      <Filter>Source Files\Math Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Game States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Start.cpp">
+      <Filter>Source Files\Game States</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash.cpp">
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\CollisionManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Math Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Application2D.cpp">
+      <Filter>Source Files\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Game Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Player.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Racquet.cpp">
+      <Filter>Source Files\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Matt%27s Tennis\Project2D\Wall.cpp">
+      <Filter>Source Files\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\ScoreManager.cpp">
+      <Filter>Source Files\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Matt%27s Tennis\project2D\Entity.cpp">
+      <Filter>Source Files\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files\Design Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\Ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Splash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StateMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DynamicArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Stack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Start.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\ScoreManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\CollisionManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Collider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\VectorCast.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix2.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math Lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix3.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math Lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\Matrix4.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math Lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Entity.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector2.h">
+      <Filter>Header Files\Math Lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Wall.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector3.h">
+      <Filter>Header Files\Math Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Vector4.h">
+      <Filter>Header Files\Math Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\VectorCast.h">
+      <Filter>Header Files\Math Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Collider.h">
+      <Filter>Header Files\Math Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\CollisionManager.h">
+      <Filter>Header Files\Math Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>Header Files\Arrays / Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Application2D.h">
+      <Filter>Header Files\Game Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Player.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\Entity.h">
+      <Filter>Header Files\Game Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Racquet.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\project2D\ScoreManager.h">
+      <Filter>Header Files\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Start.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\Arrays / Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Design Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Design Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\Design Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\Design Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Matt%27s Tennis\Project2D\Wall.h">
+      <Filter>Header Files\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\Ball.h">
+      <Filter>Header Files\Game Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

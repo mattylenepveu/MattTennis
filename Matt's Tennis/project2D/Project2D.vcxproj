@@ -163,6 +163,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\Ball.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\CollisionManager.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\Entity.cpp" />
     <ClCompile Include="..\..\Matt%27s Tennis\project2D\Matrix2.cpp" />
@@ -183,6 +184,7 @@
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\Ball.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\Collider.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\CollisionManager.h" />
     <ClInclude Include="..\..\Matt%27s Tennis\project2D\Entity.h" />

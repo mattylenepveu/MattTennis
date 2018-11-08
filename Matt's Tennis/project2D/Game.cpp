@@ -1,11 +1,15 @@
 #include "Game.h"
 #include "Input.h"
+#include "CollisionManager.h"
 
 //--------------------------------------------------------------------------------------
 // Default Constructor.
 //--------------------------------------------------------------------------------------
 Game::Game()
 {
+	// Creates the collision manager
+	CollisionManager::Create();
+
 	m_p2dRenderer = new aie::Renderer2D();
 
 	// Manages the textures in the resource manager
@@ -16,11 +20,9 @@ Game::Game()
 	// Loads the texture from resource manager and stores in texture pointer
 	m_pCourt = pTextureManager->LoadResource("./textures/Clay Court.png");
 
-	m_pBall = pTextureManager->LoadResource("./textures/Ball.png");
+	//m_pBall = new Ball(Vector2(640, 360));
 
 	m_pPlayer = new Player();
-
-	//m_pRacquet = pTextureManager->LoadResource("./textures/Racquet.png");
 
 	m_pWall = new Wall(Vector2(640, 675));
 
@@ -36,6 +38,7 @@ Game::~Game()
 	delete m_pFont;
 
 	delete m_pPlayer;
+	//delete m_pBall;
 	delete m_pWall;
 }
 
@@ -68,20 +71,9 @@ void Game::OnUpdate(float fDeltaTime, StateMachine* pStateMachine,
 	// input example
 	aie::Input* pInput = aie::Input::getInstance();
 
-	//// use arrow keys to move camera
-	//if (pInput->isKeyDown(aie::INPUT_KEY_UP))
-	//	m_fCameraY += 500.0f * fDeltaTime;
-
-	//if (pInput->isKeyDown(aie::INPUT_KEY_DOWN))
-	//	m_fCameraY -= 500.0f * fDeltaTime;
-
-	//if (pInput->isKeyDown(aie::INPUT_KEY_LEFT))
-	//	m_fCameraX -= 500.0f * fDeltaTime;
-
-	//if (pInput->isKeyDown(aie::INPUT_KEY_RIGHT))
-	//	m_fCameraX += 500.0f * fDeltaTime;
-
 	m_pPlayer->Update(fDeltaTime);
+
+	//m_pBall->Update(fDeltaTime);
 }
 
 //--------------------------------------------------------------------------------------
@@ -115,31 +107,11 @@ void Game::OnDraw(Renderer2D* m_2dRenderer)
 	// Draws the image at a position which is passed in to function
 	m_2dRenderer->drawSprite(m_pCourt, 640, 355);
 
-	m_2dRenderer->drawSprite(m_pBall, 640, 360);
-
-	//m_2dRenderer->drawSprite(m_pRacquet, 675, 75);
+	//m_pBall->Draw(m_2dRenderer);
 
 	m_pPlayer->Draw(m_2dRenderer);
 
 	m_pWall->Draw(m_2dRenderer);
-
-	//// draw a thin line
-	//m_2dRenderer->drawLine(300, 300, 600, 400, 2, 1);
-
-	//// draw a moving purple circle
-	//m_2dRenderer->setRenderColour(1, 0, 1, 1);
-	//m_2dRenderer->drawCircle(sin(m_fTimer) * 100 + 600, 150, 50);
-
-	//// draw a rotating red box
-	//m_2dRenderer->setRenderColour(1, 0, 0, 1);
-	//m_2dRenderer->drawBox(600, 500, 60, 20, m_fTimer);
-
-	//// draw a slightly rotated sprite with no texture, coloured yellow
-	//m_2dRenderer->setRenderColour(1, 1, 0, 1);
-	//m_2dRenderer->drawSprite(nullptr, 400, 400, 50, 50, 3.14159f * 0.25f, 1);
-
-	//// output some text, uses the last used colour
-	//m_2dRenderer->drawText(m_pFont, "Press ESC to quit!", 0, 720 - 64);
 
 	// done drawing sprites
 	m_2dRenderer->end();
