@@ -12,6 +12,8 @@ Ball::Ball(Vector2 v2Pos)
 	Matrix3 m3ChangePos;
 	m3ChangePos.setPos(v2Pos);
 
+	SetType(BALL);
+
 	localTransform = localTransform * m3ChangePos;
 	UpdateTransform();
 

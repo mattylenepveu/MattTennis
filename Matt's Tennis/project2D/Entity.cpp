@@ -121,6 +121,28 @@ void Entity::LocalToGlobal()
 }
 
 //--------------------------------------------------------------------------------------
+// Sets the type of an object for ColliderManager class to know
+//
+// Parameters:
+//		a: Passes in a type from the enum in "Entity.h"
+//--------------------------------------------------------------------------------------
+void Entity::SetType(Type a)
+{
+	type = a;
+}
+
+//--------------------------------------------------------------------------------------
+// Allows other functions to get the type of an object
+//
+// Return:
+//		Returns the type of an object
+//--------------------------------------------------------------------------------------
+Type Entity::GetType()
+{
+	return type;
+}
+
+//--------------------------------------------------------------------------------------
 // Sets an object to bActive if an object is in game (used for object pool)
 //
 // Parameters:

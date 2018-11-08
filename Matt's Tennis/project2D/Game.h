@@ -64,11 +64,9 @@ private:
 
 	aie::Texture* m_pBackground;
 
-	aie::Texture* m_pBall;
-
 	Player* m_pPlayer;
 
-	//Ball* m_pBall;
+	Ball* m_pBall;
 
 	Wall* m_pWall;
 

@@ -6,6 +6,17 @@
 #include "Collider.h"
 using namespace std;
 
+//--------------------------------------------------------------------------------------
+// Enum represents the different types of objects in game
+//--------------------------------------------------------------------------------------
+enum Type
+{
+	PLAYER,
+	RACQUET,
+	WALL,
+	BALL
+};
+
 class Entity
 {
 public:
@@ -71,6 +82,22 @@ public:
 	void LocalToGlobal();
 
 	//--------------------------------------------------------------------------------------
+	// Sets the type of an object for ColliderManager class to know
+	//
+	// Parameters:
+	//		a: Passes in a type from the enum in "Entity.h"
+	//--------------------------------------------------------------------------------------
+	void SetType(Type a);
+
+	//--------------------------------------------------------------------------------------
+	// Allows other functions to get the type of an object
+	//
+	// Return:
+	//		Returns the type of an object
+	//--------------------------------------------------------------------------------------
+	Type GetType();
+
+	//--------------------------------------------------------------------------------------
 	// Sets an object to bActive if an object is in game (used for object pool)
 	//
 	// Parameters:
@@ -101,6 +128,9 @@ protected:
 
 	// Sets the collider variable as a collider
 	Collider collider;
+
+	// Sets the type variable as a type
+	Type type;
 
 	// Used for "SetActive" and "GetActive" functions
 	bool bActive;

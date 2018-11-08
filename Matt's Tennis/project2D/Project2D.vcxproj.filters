@@ -97,7 +97,7 @@
       <Filter>Source Files\Design Patterns</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Matt%27s Tennis\Matt%27s Tennis\Project2D\Ball.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

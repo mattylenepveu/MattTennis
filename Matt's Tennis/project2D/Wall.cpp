@@ -12,6 +12,8 @@ Wall::Wall(Vector2 v2Pos)
 	Matrix3 m3ChangePos;
 	m3ChangePos.setPos(v2Pos);
 
+	SetType(WALL);
+
 	localTransform = localTransform * m3ChangePos;
 	UpdateTransform();
 

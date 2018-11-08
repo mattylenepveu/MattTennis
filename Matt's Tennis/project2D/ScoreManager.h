@@ -12,4 +12,3 @@ public:
 private:
 	int m_nHighScore;
 };
-

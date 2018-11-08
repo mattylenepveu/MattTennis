@@ -20,7 +20,7 @@ Game::Game()
 	// Loads the texture from resource manager and stores in texture pointer
 	m_pCourt = pTextureManager->LoadResource("./textures/Clay Court.png");
 
-	//m_pBall = new Ball(Vector2(640, 360));
+	m_pBall = new Ball(Vector2(640, 360));
 
 	m_pPlayer = new Player();
 
@@ -38,7 +38,7 @@ Game::~Game()
 	delete m_pFont;
 
 	delete m_pPlayer;
-	//delete m_pBall;
+	delete m_pBall;
 	delete m_pWall;
 }
 
@@ -69,11 +69,11 @@ void Game::OnUpdate(float fDeltaTime, StateMachine* pStateMachine,
 	m_fTimer += fDeltaTime;
 
 	// input example
-	aie::Input* pInput = aie::Input::getInstance();
+	//aie::Input* pInput = aie::Input::getInstance();
 
 	m_pPlayer->Update(fDeltaTime);
 
-	//m_pBall->Update(fDeltaTime);
+	m_pBall->Update(fDeltaTime);
 }
 
 //--------------------------------------------------------------------------------------
@@ -107,11 +107,13 @@ void Game::OnDraw(Renderer2D* m_2dRenderer)
 	// Draws the image at a position which is passed in to function
 	m_2dRenderer->drawSprite(m_pCourt, 640, 355);
 
-	//m_pBall->Draw(m_2dRenderer);
+	m_pBall->Draw(m_2dRenderer);
+
+	m_pWall->Draw(m_2dRenderer);
 
 	m_pPlayer->Draw(m_2dRenderer);
 
-	m_pWall->Draw(m_2dRenderer);
+	
 
 	// done drawing sprites
 	m_2dRenderer->end();

@@ -7,6 +7,8 @@ Racquet::Racquet()
 {
 	m_texture = new aie::Texture("./textures/Racquet.png");
 
+	SetType(RACQUET);
+
 	// Adds car to the collision list
 	CollisionManager::GetInstance()->AddObject(this);
 
@@ -85,7 +87,6 @@ void Racquet::Swing(float fDeltaTime)
 		}
 	}
 
-	
 	localTransform.setRotateZ(m_fRotation);
 	localTransform[2].x = 30;
 	UpdateTransform();

@@ -19,6 +19,7 @@ private:
 	Racquet* m_racquet;
 
 	Vector2 m_v2Position;
+	Vector2 m_v2PrevPos;
 	Vector2 m_v2MoveDir;
 
 	float m_fSpeed;
