@@ -9,6 +9,9 @@ Wall::Wall(Vector2 v2Pos)
 	m_pTexture = new aie::Texture("./textures/Wall.png");
 	_ASSERT(m_pTexture);
 
+	collider.bottomLeft = Vector2(0, 0);
+	collider.topRight = Vector2(975, 70);
+
 	Matrix3 m3ChangePos;
 	m3ChangePos.setPos(v2Pos);
 

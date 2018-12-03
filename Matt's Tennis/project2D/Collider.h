@@ -12,6 +12,6 @@ struct Collider
 	float rad;
 
 	// Defines the top left and bottom right both as Vector2's
-	Vector2 topLeft;
-	Vector2 bottomRight;
+	Vector2 bottomLeft;
+	Vector2 topRight;
 };

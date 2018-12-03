@@ -9,6 +9,9 @@ Racquet::Racquet()
 
 	SetType(RACQUET);
 
+	collider.bottomLeft = Vector2(0, 0);
+	collider.topRight = Vector2(90, 21);
+
 	// Adds car to the collision list
 	CollisionManager::GetInstance()->AddObject(this);
 

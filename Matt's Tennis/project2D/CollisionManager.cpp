@@ -95,15 +95,15 @@ Entity* CollisionManager::TestBoxCollision(Entity* object)
 
 		// Gets properties of both boxes
 		Collider collider1 = object->GetCollider();
-		collider1.topLeft += object->GetPosition();
-		collider1.bottomRight += object->GetPosition();
+		collider1.bottomLeft += object->GetPosition();
+		collider1.topRight += object->GetPosition();
 
 		Collider collider2 = collisionList[i]->GetCollider();
-		collider2.topLeft += collisionList[i]->GetPosition();
-		collider2.bottomRight += collisionList[i]->GetPosition();
+		collider2.bottomLeft += collisionList[i]->GetPosition();
+		collider2.topRight += collisionList[i]->GetPosition();
 
 		// Checks if the objects are connected
-		if (collider1.bottomRight > collider2.topLeft && collider1.topLeft < collider2.bottomRight)
+		if (collider1.topRight > collider2.bottomLeft && collider1.bottomLeft < collider2.topRight)
 			// If so, then return the object in the collision list
 			return collisionList[i];
 	}
@@ -132,8 +132,8 @@ Entity* CollisionManager::TestSphereCollision(Entity* object)
 
 		// Gets properties of the box
 		Collider collider = collisionList[i]->GetCollider();
-		collider.topLeft += collisionList[i]->GetPosition();
-		collider.bottomRight += collisionList[i]->GetPosition();
+		collider.bottomLeft += collisionList[i]->GetPosition();
+		collider.topRight += collisionList[i]->GetPosition();
 
 		// Gets properties of the circular object
 		Collider sphere = object->GetCollider();
@@ -141,7 +141,7 @@ Entity* CollisionManager::TestSphereCollision(Entity* object)
 		float rad = sphere.rad;
 
 		// Calculates the collision
-		Vector2 A = pos.clamp(collider.bottomRight, collider.topLeft);
+		Vector2 A = pos.clamp(collider.topRight, collider.bottomLeft);
 		Vector2 V = A - pos;
 		float VMag = V.sqrMagnitude();
 

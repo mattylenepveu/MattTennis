@@ -13,8 +13,8 @@ Entity::Entity()
 	Parent = nullptr;
 
 	// Sets the top left and bottom right by default
-	collider.topLeft = Vector2(-30, -30);
-	collider.bottomRight = Vector2(30, 30);
+	collider.bottomLeft = Vector2(-30, -30);
+	collider.topRight = Vector2(30, 30);
 
 	// Sets variable to false by default
 	bActive = false;

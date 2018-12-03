@@ -23,6 +23,9 @@ private:
 	Vector2 m_v2MoveDir;
 
 	float m_fSpeed;
+	float m_fRegSpeed;
+	float m_fRunSpeed;
+
 	float m_fMoveX;
 	float m_fMoveY;
 };

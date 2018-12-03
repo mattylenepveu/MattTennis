@@ -1,13 +1,14 @@
 #include "Player.h"
 #include "CollisionManager.h"
 #include "Input.h"
+#include <iostream>
 
 Player::Player()
 {
 	m_texture = new aie::Texture("./textures/Player.png");
 
-	/*collider.topLeft = Vector2(-36, 32);
-	collider.bottomRight = Vector2(36, -32);*/
+	collider.bottomLeft = Vector2(0, 0);
+	collider.topRight = Vector2(75, 68);
 
 	Matrix3 m3ChangePos;
 	m3ChangePos.setPos(600, 75);
@@ -27,7 +28,10 @@ Player::Player()
 	// Adds car to the collision list
 	CollisionManager::GetInstance()->AddObject(this);
 
-	m_fSpeed = 200.0f;
+	m_fRegSpeed = 200.0f;
+	m_fRunSpeed = 300.0f;
+	m_fSpeed = m_fRegSpeed;
+
 	m_fMoveX = 0.0f;
 	m_fMoveY = 0.0f;
 }
@@ -67,6 +71,10 @@ void Player::Update(float fDeltaTime)
 	if (pInput->isKeyUp(68))
 		m_fMoveX = 0.0f;
 
+	// Left Shift
+	if (pInput->isKeyUp(340))
+		m_fSpeed = m_fRegSpeed;
+
 	// KEYDOWN
 	// W
 	if (pInput->isKeyDown(87))
@@ -84,11 +92,15 @@ void Player::Update(float fDeltaTime)
 	if (pInput->isKeyDown(68))
 		m_fMoveX = 1.0f;
 
+	// Left Shift
+	if (pInput->isKeyDown(340))
+		m_fSpeed = m_fRunSpeed;
+
 	m_v2MoveDir = Vector2(m_fMoveX, m_fMoveY);
 
 	if (collide && collide->GetType() == WALL)
 	{
-		m_v2Position = m_v2PrevPos;
+		std::cout << "COLLIDE!" << std::endl;
 	}
 	else
 	{
